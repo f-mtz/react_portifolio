@@ -1,0 +1,71 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
+    
+    --primary: 142 76% 36%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --card: 240 4% 16%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+    
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 142 76% 36%;
+    
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.timeline-item {
+  @apply relative pl-8 pb-12 border-l border-muted last:border-l-0 last:pb-0;
+}
+
+.timeline-dot {
+  @apply absolute -left-[5px] w-2.5 h-2.5 rounded-full bg-accent;
+}
+
+.skill-bar {
+  @apply h-2 bg-muted rounded-full overflow-hidden;
+}
+
+.skill-progress {
+  @apply h-full bg-accent transition-all duration-1000;
+}
+
+.gallery-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 gap-4;
+}
+
+.contact-input {
+  @apply w-full bg-secondary p-3 rounded-lg focus:ring-2 focus:ring-accent outline-none;
+}
